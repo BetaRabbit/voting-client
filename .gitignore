@@ -1,5 +1,4 @@
 # Logs
-logs
 *.log
 
 # Runtime data
@@ -28,3 +27,6 @@ node_modules
 
 # JetBrain files
 .idea
+
+# bundle.js
+dist/bundle.js

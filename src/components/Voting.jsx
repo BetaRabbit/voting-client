@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import Winner from './winner.jsx';
-import Vote from './vote.jsx';
+import Winner from './Winner';
+import Vote from './Vote';
 
 const propTypes = {
   winner: PropTypes.string,

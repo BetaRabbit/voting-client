@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 const propTypes = {
-  pair: PropTypes.array,
+  pair: PropTypes.object,
   vote: PropTypes.func,
   hasVoted: PropTypes.string,
 };

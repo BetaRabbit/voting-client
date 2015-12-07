@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { renderIntoDocument, scryRenderedDOMComponentsWithTag, Simulate, isCompositeComponent } from 'react-addons-test-utils';
+import { renderIntoDocument, scryRenderedDOMComponentsWithTag, Simulate } from 'react-addons-test-utils';
 import { expect } from 'chai';
 
 import Voting from '../../src/components/Voting';

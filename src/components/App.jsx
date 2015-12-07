@@ -2,6 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import { fromJS } from 'immutable';
 
 const pair = fromJS(['a', 'b']);
+const tally = fromJS({
+  a: 5,
+  b: 3,
+});
 
 const propTypes = {
   children: PropTypes.object,
@@ -9,7 +13,10 @@ const propTypes = {
 
 export default class App extends Component {
   render() {
-    return React.cloneElement(this.props.children, { pair: pair });
+    return React.cloneElement(this.props.children, {
+      pair: pair,
+      tally: tally,
+    });
   }
 }
 

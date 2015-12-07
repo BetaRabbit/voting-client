@@ -20,5 +20,9 @@ describe('Results', () => {
     const [a, b] = entries.map(e => e.textContent);
 
     expect(entries.length).to.equal(2);
+    expect(a).to.contain('a');
+    expect(a).to.contain(5);
+    expect(b).to.contain('b');
+    expect(b).to.contain(3);
   });
 });

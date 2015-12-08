@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { renderIntoDocument, scryRenderedDOMComponentsWithTag, Simulate } from 'react-addons-test-utils';
 import { expect } from 'chai';
 
@@ -18,7 +17,7 @@ describe('Voting', () => {
   });
 
   it('invokes callback when a button is clicked', () => {
-    let voteWith;
+    let voteWith = undefined;
     const vote = (entry) => voteWith = entry;
 
     const component = renderIntoDocument(

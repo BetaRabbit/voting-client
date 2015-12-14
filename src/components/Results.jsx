@@ -1,4 +1,6 @@
+// jscs:disable validateQuoteMarks
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import Winner from './Winner';
 
 const propTypes = {
@@ -6,7 +8,7 @@ const propTypes = {
   tally: PropTypes.tally,
 };
 
-export default class Results extends Component {
+class Results extends Component {
   getPair() {
     return this.props.pair || [];
   }
@@ -42,3 +44,13 @@ export default class Results extends Component {
 }
 
 Results.propTypes = propTypes;
+
+function select(state) {
+  return {
+    pair: state.getIn(['vote', 'pair']),
+    tally: state.getIn(['vote', 'tally']),
+    winner: state.get('winner'),
+  };
+}
+
+export default connect(select)(Results);

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Winner from './Winner';
 
 const propTypes = {
-  pair: PropTypes.array,
+  pair: PropTypes.object,
   tally: PropTypes.tally,
 };
 

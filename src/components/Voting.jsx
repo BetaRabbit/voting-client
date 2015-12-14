@@ -5,7 +5,7 @@ import Winner from './Winner';
 import Vote from './Vote';
 
 const propTypes = {
-  pair: PropTypes.array,
+  pair: PropTypes.object,
   winner: PropTypes.string,
 };
 

@@ -9,7 +9,7 @@ const propTypes = {
   winner: PropTypes.string,
 };
 
-class Voting extends Component {
+export class Voting extends Component {
   render() {
     return (
       <div>

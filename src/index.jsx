@@ -11,18 +11,6 @@ import Voting from './components/Voting';
 import Results from './components/Results';
 
 const store = createStore(reducer);
-store.dispatch({
-  type: 'SET_STATE',
-  state: {
-    vote: {
-      pair: ['a', 'b'],
-      tally: {
-        a: 1,
-        b: 2,
-      },
-    },
-  },
-});
 
 const socket = io(`${ location.protocol }//${ location.hostname }:8090`);
 socket.on('state', state => {

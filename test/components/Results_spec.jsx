@@ -4,7 +4,7 @@ import { renderIntoDocument, scryRenderedDOMComponentsWithClass, Simulate } from
 import { fromJS } from 'immutable';
 import { expect } from 'chai';
 
-import Results from '../../src/components/Results';
+import { Results } from '../../src/components/Results';
 
 describe('Results', () => {
   it('renders entries with vote counts or zero', () => {

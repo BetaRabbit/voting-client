@@ -2,7 +2,7 @@ import React from 'react';
 import { renderIntoDocument, scryRenderedDOMComponentsWithTag, Simulate } from 'react-addons-test-utils';
 import { expect } from 'chai';
 
-import Voting from '../../src/components/Voting';
+import { Voting } from '../../src/components/Voting';
 
 describe('Voting', () => {
   it('renders a pair of buttons', () => {
@@ -61,5 +61,4 @@ describe('Voting', () => {
 
     expect(buttons.length).to.equal(0);
   });
-
 });

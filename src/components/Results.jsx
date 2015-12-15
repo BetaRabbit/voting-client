@@ -8,7 +8,7 @@ const propTypes = {
   tally: PropTypes.tally,
 };
 
-class Results extends Component {
+export class Results extends Component {
   getPair() {
     return this.props.pair || [];
   }

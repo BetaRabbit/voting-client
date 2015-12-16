@@ -7,13 +7,14 @@ function setState(state, newState) {
 function resetVote(state) {
   let nextState = state;
   const currentPair = state.getIn(['vote', 'pair'], fromJS([]));
-  const tally = state.getIn(['vote', 'tally'], fromJS({})).keys();
+  const tally = state.getIn(['vote', 'tally'], fromJS({}));
   const hasVoted = state.get('hasVoted');
+
   if (hasVoted && !currentPair.includes(hasVoted)) {
     nextState = state.remove('hasVoted');
   }
 
-  if (hasVoted && tally.includes(hasVoted)) {
+  if (hasVoted && tally.has(hasVoted)) {
     nextState = state.removeIn(['vote', 'tally']);
   }
 

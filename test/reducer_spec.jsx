@@ -133,9 +133,10 @@ describe('reducer', () => {
           a: 1,
         },
       },
+      hasVoted: 'a',
     });
 
-    const action = { type: 'SET_STATE', entry: ['c', 'd'] };
+    const action = { type: 'SET_STATE', state: { vote: { pair: ['c', 'd'] } } };
     const nextState = reducer(state, action);
 
     expect(nextState).to.equal(fromJS({

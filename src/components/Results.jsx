@@ -1,4 +1,3 @@
-// jscs:disable validateQuoteMarks
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Winner from './Winner';
@@ -24,7 +23,7 @@ export class Results extends Component {
   render() {
     return (
       this.props.winner ? <Winner ref="winner" winner={ this.props.winner } /> :
-        <div className="resutls">
+        <div className="results">
           <div className="tally">
             { this.getPair().map(entry =>
               <div key={entry} className="entry">

@@ -1,4 +1,3 @@
-// jscs:disable validateQuoteMarks
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Winner from './Winner';

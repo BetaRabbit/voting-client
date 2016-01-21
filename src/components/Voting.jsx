@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Winner from './Winner';
 import Vote from './Vote';
+import * as actionCreators from '../action_creators';
 
 const propTypes = {
   pair: PropTypes.object,
@@ -24,10 +25,14 @@ export class Voting extends Component {
 function select(state) {
   return {
     pair: state.getIn(['vote', 'pair']),
+    hasVoted: state.get('hasVoted'),
     winner: state.get('winner'),
   };
 }
 
 Voting.propTypes = propTypes;
 
-export default connect(select)(Voting);
+export default connect(
+  select,
+  actionCreators
+)(Voting);

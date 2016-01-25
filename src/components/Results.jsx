@@ -4,7 +4,7 @@ import Winner from './Winner';
 
 const propTypes = {
   pair: PropTypes.object,
-  tally: PropTypes.tally,
+  tally: PropTypes.object,
 };
 
 export class Results extends Component {

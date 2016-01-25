@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Winner from './Winner';
+import * as actionCreator from '../action_creators';
 
 const propTypes = {
   pair: PropTypes.object,
@@ -52,4 +53,7 @@ function select(state) {
   };
 }
 
-export default connect(select)(Results);
+export default connect(
+  select,
+  actionCreator
+)(Results);

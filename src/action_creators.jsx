@@ -5,9 +5,21 @@ export function setState(state) {
   };
 }
 
-export function vote(vote) {
+export function vote(entry) {
   return {
+    meta: {
+      remote: true,
+    },
     type: 'VOTE',
-    vote,
+    entry,
+  };
+}
+
+export function next() {
+  return {
+    meta: {
+      remote: true,
+    },
+    type: 'NEXT',
   };
 }
